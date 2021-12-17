@@ -1,0 +1,18 @@
+/*
+ Theme Name:   Joseph knows best -child
+ Theme URI:    https://tom-rose.de
+ Description:  Joseph knows best child-theme
+ Author:       Tom Rose
+ Author URI:   https://tom-rose.de
+ Template:     Joseph-knows-best
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  jkb-child
+*/
+
+@import '_variables';
+
+body{
+  background: $green;
+}
