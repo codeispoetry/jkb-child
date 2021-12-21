@@ -41,7 +41,5 @@
     "compile:build": "node-sass sass/style.scss -o ./",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'"
-  },
-  "dependencies": {
   }
 }

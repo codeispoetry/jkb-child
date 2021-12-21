@@ -47,3 +47,6 @@ sync-db:
 	rm sync.sql
 	#docker-compose exec -T db mysql wordpress < sync.sql
 	#nano /root/.my.cnf -> [client] \n password=somewordpress
+
+browser-sync:
+	browser-sync start --proxy "localhost:8800" --files "htdocs/wp-content/themes/jkb-child/*.css"
