@@ -1,0 +1,18 @@
+$width: 300px;
+$height: $width;
+
+@media only screen and (min-width: 800px) {
+    body{
+        &::after{
+            background-image: url(assets/sunflower.svg);
+            background-size: $width $height;
+            content: "";
+            position: fixed;
+            top: ($height * 0.25);
+            left: -($width / 2);
+            width: $width;
+            height: $height;
+            pointer-events:none;
+        }
+    }
+}
