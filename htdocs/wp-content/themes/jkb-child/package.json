@@ -40,6 +40,12 @@
     "compile:css": "node-sass sass/style.scss -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:build": "node-sass sass/style.scss -o ./",
     "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'"
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "bundle": "dir-archiver --src . --dest ../jkb-child2.zip --exclude node_modules package-lock.json package.json sass style.css.map .gitignore",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "dependencies": {
+    "dir-archiver": "^1.2.0"
   }
 }

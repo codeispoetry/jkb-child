@@ -22,7 +22,7 @@ deploy:
 deploy_s:
 	make bundle_s upload_s install_s
 
-bundle_s:
+bundle:
 	docker-compose exec node npm run bundle
 
 upload_s:
@@ -50,3 +50,4 @@ sync-db:
 
 browser-sync:
 	browser-sync start --proxy "localhost:8800" --files "htdocs/wp-content/themes/jkb-child/*.css"
+
