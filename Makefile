@@ -19,20 +19,20 @@ cli-shell:
 deploy:
 	cd htdocs && rsync -avhz wp-content/themes/mytheme dev:/var/www/tom-rose.de/wordpress/wp-content/themes/mytheme
 
-deploy_s:
-	make bundle_s upload_s install_s
+deploy:
+	make bundle upload install
 
 bundle:
 	docker-compose exec node npm run bundle
 
-upload_s:
-	rsync htdocs/wp-content/themes/_s.zip dev:/var/www/tom-rose.de/wordpress/wp-content/themes/
+upload:
+	rsync htdocs/wp-content/themes/jkb-child.zip dev:/var/www/wordpress.tom-rose.de/wp-content/themes/
 
-install_s:
-	ssh dev "cd /var/www/tom-rose.de/wordpress/wp-content/themes/ && wp theme install _s.zip --force"
+install:
+	ssh dev "cd /var/www/wordpress.tom-rose.de/wp-content/themes/ && wp theme install jkb-child.zip --force"
 
-activate_s:
-	ssh dev "cd /var/www/tom-rose.de/wordpress/wp-content/themes/ && wp theme activate _s"
+activate:
+	ssh dev "cd /var/www/wordpress.tom-rose.de/wp-content/themes/ && wp theme activate jkb-child"
 
 
 sync-shared:
