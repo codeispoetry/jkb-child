@@ -4,6 +4,10 @@
 }
 
 h1, h2, h3, h4, h5, h6,
-.nav-main, .home-tabs .responsive-tabs__list li{
+.nav-main, .home-tabs .responsive-tabs__list li,p.cta a,
+.nav-social a,
+.widget.widget_sp_image .widget_sp_image-description a, .widget.widget_sp_image .widget_sp_image-description a,
+.sidebar.involvebar .widget_text a, .sidebar.involvebar .widget_sp_image-description a,
+#main form input[type="submit"], #main form .cr_ipe_item button{
   font-family: 'BereitBold' !important;
 }

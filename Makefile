@@ -14,25 +14,19 @@ node:
 	docker-compose exec node bash
 
 cli-shell:
-	docker run -it --rm --volumes-from wordpress --network container:wordpress  wordpress:cli /bin/bash
-
-deploy:
-	cd htdocs && rsync -avhz wp-content/themes/mytheme dev:/var/www/tom-rose.de/wordpress/wp-content/themes/mytheme
-
-deploy:
-	make bundle upload install
+	docker run -it --rm --volumes-from wordpressjkb --network container:wordpressjkb  wordpress:cli /bin/bash
 
 bundle:
 	docker-compose exec node npm run bundle
 
 upload:
-	rsync htdocs/wp-content/themes/jkb-child.zip dev:/var/www/wordpress.tom-rose.de/wp-content/themes/
+	rsync htdocs/wp-content/themes/jkb-child.zip dev:/var/www/nrw.tom-rose.de/site/themes/
 
 install:
-	ssh dev "cd /var/www/wordpress.tom-rose.de/wp-content/themes/ && wp theme install jkb-child.zip --force"
+	ssh dev "cd /var/www/nrw.tom-rose.de/site/themes/ && wp theme install jkb-child.zip --force"
 
 activate:
-	ssh dev "cd /var/www/wordpress.tom-rose.de/wp-content/themes/ && wp theme activate jkb-child"
+	ssh dev "cd /var/www/wordpress.tom-rose.de/site/themes/ && wp theme activate jkb-child"
 
 
 sync-shared:
@@ -50,4 +44,11 @@ sync-db:
 
 browser-sync:
 	browser-sync start --proxy "localhost:8800" --files "htdocs/wp-content/themes/jkb-child/*.css"
+
+
+log:
+	docker logs wordpressjkb -f
+
+error-log:
+	docker logs wordpressjkb -f 1>/dev/null
 
