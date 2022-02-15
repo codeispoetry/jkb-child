@@ -17,12 +17,21 @@
 
 
 body{
-    background: $lightgreen;
+    background: $darkgreen;
     background-repeat: repeat;
 }
 
 #nav-flyin{
     background-color: $darkgreen;
+}
+
+.nav-main .cta a,
+.nav-main .menu-item-24753 a,
+a span.button, span.button a{
+    background-color: $violet !important;
+}
+.nav-social a:before{
+    color: $violet;
 }
 
 
