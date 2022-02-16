@@ -1,0 +1,46 @@
+
+.nav-main .menu-item-24753 {padding: 0.5em 0.5em;padding-right: 0;}
+.nav-main .menu-item-24753 a, .nav-main .menu-item-24753.current-menu-item a {background: #e6007e;color: #fff;padding: 0.5em;border: 0;	}
+    .nav-main .menu-item-24753 a:hover {color: #46962b;background: #ffee00;text-transform: uppercase;}
+
+h1, .single h1 {
+/* font-size:4em;*/
+}
+
+
+#newsonhomepage {display: none;}
+
+
+/*Nachfolgend Sachen für die Bearbeitung von Action-Network-Formularen*/
+#logo_wrap {display:none;}
+
+#action_info_inner {display:none;}
+
+
+/*Gelbe Infobox geht bis an den linken und rechten Rand von Beiträgen und Seiten.*/
+.infobox {
+margin-left: -2em;
+margin-right: -2em;
+}
+
+/*Altruja bindet am Ende der Seite einen Button ein und macht einen großen Abstand nach oben, sehr hässlich. Hiermit geht der weg.*/
+#ef-bl-x7jn2nd9j img {display:none;}
+
+
+
+/*Damit Checkboxen von Contact Form 7 auch in Chrome dargestellt werden.*/
+input[type="checkbox"] {
+width: 13px !important ;
+-webkit-appearance: checkbox !important;
+}
+
+/*Unter Beiträgen: Neuste oder ähnliche Beiträge ausblenden. Diesen Code nach März 2021 löschen.*/
+.comment-tabs {display:none;}
+
+
+/*Nachfolgend Sachen für die Bearbeitung von Action-Network-Formularen - Zusätzlich aufgenommen am 27. Mai 2021, nachdem Kabir und Thomas K. festgestellt haben, dass wir beim Bewerben von Webinaren da ein Dark Pattern drin haben.*/
+#d_sharing {display:none;}
+.additional_text {display:none;}
+
+/*Nachfolgend wurden die Spenden-Buttons auf der Startseite ausgeblendet.*/
+#donatenow {display:none;}

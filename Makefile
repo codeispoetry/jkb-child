@@ -26,9 +26,11 @@ install:
 	ssh dev "cd /var/www/nrw.tom-rose.de/site/themes/ && wp theme install jkb-child.zip --force"
 
 activate:
-	ssh dev "cd /var/www/wordpress.tom-rose.de/site/themes/ && wp theme activate jkb-child"
+	ssh dev "cd /var/www/nrw.tom-rose.de/site/themes/ && wp theme activate jkb-child"
 
-
+deploy:
+	make bundle upload install
+	
 sync-shared:
 	rsync -av dev:/var/www/tom-rose.de/wordpress/wp-content/uploads/ htdocs/wp-content/uploads
 
