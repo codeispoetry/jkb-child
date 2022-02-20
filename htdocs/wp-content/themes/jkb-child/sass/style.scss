@@ -53,3 +53,11 @@ a:hover,
     color: $violet;
 }
 
+h1.landing-title{
+    background-image: unset;
+    span{
+        background-color: $violet;
+        background-image: unset;
+        padding: .3em .5em .3em .5em;
+    }
+}
