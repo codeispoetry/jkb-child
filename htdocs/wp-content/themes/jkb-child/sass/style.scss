@@ -27,6 +27,7 @@ body{
     background-color: $darkgreen;
 }
 
+.sidebar.involvebar .widget_text a:hover, .sidebar.involvebar .widget_sp_image-description a:hover,
 .nav-main .cta a,
 .nav-main .menu-item-24753 a,
 a span.button, span.button a{
@@ -46,6 +47,8 @@ a span.button, span.button a{
 }
 
 
+article.postlist-small h2 a span,
+a:hover,
 .nav-social a:before{
     color: $violet;
 }
