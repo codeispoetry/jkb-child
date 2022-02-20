@@ -19,6 +19,9 @@ cli-shell:
 bundle:
 	docker-compose exec node npm run bundle
 
+compile:
+	docker-compose exec node npm run compile:build
+
 upload:
 	rsync htdocs/wp-content/themes/jkb-child.zip dev:/var/www/nrw.tom-rose.de/site/themes/
 
