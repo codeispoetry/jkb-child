@@ -48,9 +48,10 @@ a span.button, span.button a{
 
 
 article.postlist-small h2 a span,
+.personen-list h3,
 a:hover,
 .nav-social a:before{
-    color: $violet;
+    color: $violet !important;
 }
 
 h1.landing-title{
